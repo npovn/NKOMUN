@@ -1,0 +1,805 @@
+@font-face {
+    font-family: Iciel;
+    src: url(../font/Iciel.ttf);
+}
+
+@font-face {
+    font-family: Briko;
+    src: url(../font/Briko.ttf);
+}
+
+@font-face {
+    font-family: SVN-Aleo;
+    src: url(../font/SVN-Aleo.ttf);
+}
+
+@font-face {
+    font-family: Spectral;
+    src: url(../font/Spectral.ttf);
+}
+
+@font-face {
+    font-family: NorthLand;
+    src: url(../font/NorthLand.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    transform: translateZ(0);
+    overflow: hidden;
+    position: absolute;
+}
+
+.backgroundcover {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    background: linear-gradient(rgba(10, 0, 0, 0.75),
+            rgba(0, 10, 0, 0.75));
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.parallax {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    width: 80%;
+    margin: auto;
+    transform: translateX(10vw);
+    padding: 35px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.logo {
+    height: 10vh;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    font-family: Iciel;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.2vh;
+}
+
+.navbar ul li::after {
+    content: "";
+    align-items: center;
+    height: 5px;
+    bottom: -8px;
+    left: 0;
+    /* Cái này set cho animation */
+    width: 0;
+    background-color: transparent;
+
+    position: absolute;
+    transition: 0.25s;
+}
+
+/* Title */
+.title {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+@keyframes Header_Transition {
+    0% {
+        transform: translateY(40px);
+        color: transparent;
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.title h1 {
+    font-family: Briko;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+
+    animation: Header_Transition 0.6s ease-out;
+}
+
+@keyframes Description_Transition {
+    0% {
+        transform: translateY(60px);
+        color: transparent;
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.title p {
+    font-family: Iciel;
+    text-transform: uppercase;
+    margin: 0 2.5vw;
+    padding: 0;
+
+    animation: Description_Transition 1s ease-out;
+}
+
+@keyframes Button_Transition {
+    0% {
+        transform: translateY(100px);
+        color: transparent;
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.title div a button {
+    color: white;
+    font-size: 1.5rem;
+    width: 190px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 20 25px;
+    padding: 0;
+    border: 3px solid rgb(255, 96, 96);
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    font-family: Iciel;
+    text-transform: uppercase;
+
+    animation: Button_Transition 1s ease-out;
+}
+
+/* Format span hiệu ứng của button */
+.BtnContainer button span {
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+    background-color: rgb(255, 96, 96);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.2s;
+}
+
+.title div a button:hover {
+    border: transparent;
+    color: rgb(15, 15, 15);
+}
+
+.BtnContainer button:hover span {
+    width: 100%;
+    border: 3px solid rgb(255, 106, 106);
+}
+
+/* Khi media lớn như pc */
+@media screen and (min-width: 801px) {
+    .navbar ul li a {
+        font-size: 20px;
+    }
+
+    .navbar ul li:hover::after {
+        width: 100%;
+        background-color: rgb(255, 96, 96);
+    }
+
+    .navbar ul li a:hover {
+        color: rgb(197, 233, 221);
+    }
+
+    .title h1 {
+        font-size: 150px;
+    }
+
+    .title p {
+        font-size: 20px;
+        margin-bottom: 17px;
+    }
+
+    .BtnContainer {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Chỉnh cỡ  navbar cho phù hợp  */
+@media screen and (max-width: 1080px) {
+    .navbar ul li a {
+        font-size: 15px;
+    }
+
+    .navbar ul li::after {
+        height: 4px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .navbar ul li a {
+        font-size: 13px;
+    }
+
+    .navbar ul li::after {
+        height: 3.3px;
+    }
+}
+
+/* Khi media nhỏ cỡ mobile */
+@media screen and (max-width: 800px) {
+
+    .navbar ul li a,
+    .navbar ul li::after {
+        display: none;
+    }
+
+    .title h1 {
+        font-size: 76px;
+    }
+
+    .title p {
+        font-size: 10px;
+        margin-bottom: 25px;
+    }
+
+    .BtnContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .Logo {
+        width: 95px;
+        height: auto;
+    }
+}
+
+/* Format cái div content */
+.content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+@media screen and (min-width: 810px) {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 1em;
+        position: relative;
+        align-items: stretch;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 1em;
+        position: relative;
+        align-items: stretch;
+    }
+}
+
+.A {
+    position: relative;
+}
+
+.B {
+    position: relative;
+}
+
+.C {
+    position: relative;
+}
+
+.t_title {
+    position: absolute;
+    top: 0;
+    left: 0.5em;
+    right: 0.3em;
+    height: 100%;
+    width: 97%;
+    z-index: 99;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.title p {
+    padding: 2em;
+}
+
+.t_title h1 {
+    padding-top: 20px;
+    position: relative;
+    align-self: center;
+    text-align: center;
+    font-family: Briko;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.t_title p {
+    font-family: Spectral;
+    font-size: 1rem;
+    padding-left: 0.5em;
+}
+
+.A {
+    background-color: rgb(231, 59, 93);
+    border: 0.3em solid;
+    border-color: rgb(168, 52, 77);
+    border-radius: 1.3em;
+    padding: 1em;
+    height: 150px;
+    -webkit-transition: height ease 0.5s;
+    -moz-transition: height ease 0.5s;
+    -o-transition: height ease 0.5s;
+    transition: height ease 0.5s;
+}
+
+.B {
+    background-color: darkseagreen;
+    border: 0.3em solid;
+    border-color: rgb(115, 149, 115);
+    border-radius: 1.3em;
+    padding: 1em;
+    height: 150px;
+    -webkit-transition: height ease 0.5s;
+    -moz-transition: height ease 0.5s;
+    -o-transition: height ease 0.5s;
+    transition: height ease 0.5s;
+}
+
+.C {
+    background-color: dodgerblue;
+    border: 0.3em solid;
+    border-color: rgb(22, 103, 184);
+    border-radius: 1.3em;
+    padding: 1em;
+    height: 150px;
+    -webkit-transition: height ease 0.5s;
+    -moz-transition: height ease 0.5s;
+    -o-transition: height ease 0.5s;
+    transition: height ease 0.5s;
+}
+
+.A:hover {
+    height: 600px !important;
+    cursor: pointer;
+    transition: height ease 0.5s;
+    -webkit-transition: height ease 0.5s;
+    -moz-transition: height ease 0.5s;
+    -o-transition: height ease 0.5s;
+}
+
+.B:hover {
+    height: 600px !important;
+    cursor: pointer;
+    transition: height ease 0.5s;
+    -webkit-transition: height ease 0.5s;
+    -moz-transition: height ease 0.5s;
+    -o-transition: height ease 0.5s;
+}
+
+.C:hover {
+    height: 600px !important;
+    cursor: pointer;
+    transition: height ease 0.5s;
+    -webkit-transition: height ease 0.5s;
+    -moz-transition: height ease 0.5s;
+    -o-transition: height ease 0.5s;
+}
+
+@media screen and (min-width: 950px) {
+    .A:hover {
+        height: 400px !important;
+        cursor: pointer;
+        transition: height ease 0.5s;
+        -webkit-transition: height ease 0.5s;
+        -moz-transition: height ease 0.5s;
+        -o-transition: height ease 0.5s;
+    }
+
+    .B:hover {
+        height: 400px !important;
+        cursor: pointer;
+        transition: height ease 0.5s;
+        -webkit-transition: height ease 0.5s;
+        -moz-transition: height ease 0.5s;
+        -o-transition: height ease 0.5s;
+    }
+
+    .C:hover {
+        height: 400px !important;
+        cursor: pointer;
+        transition: height ease 0.5s;
+        -webkit-transition: height ease 0.5s;
+        -moz-transition: height ease 0.5s;
+        -o-transition: height ease 0.5s;
+    }
+}
+
+@media screen and (min-width: 810px) and (max-width: 940px) {
+    .A:hover {
+        height: 600px !important;
+        cursor: pointer;
+        transition: height ease 0.5s;
+        -webkit-transition: height ease 0.5s;
+        -moz-transition: height ease 0.5s;
+        -o-transition: height ease 0.5s;
+    }
+
+    .B:hover {
+        height: 600px !important;
+        cursor: pointer;
+        transition: height ease 0.5s;
+        -webkit-transition: height ease 0.5s;
+        -moz-transition: height ease 0.5s;
+        -o-transition: height ease 0.5s;
+    }
+
+    .C:hover {
+        height: 600px !important;
+        cursor: pointer;
+        transition: height ease 0.5s;
+        -webkit-transition: height ease 0.5s;
+        -moz-transition: height ease 0.5s;
+        -o-transition: height ease 0.5s;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .A:hover {
+        height: 400px !important;
+        cursor: pointer;
+        transition: height ease 0.5s;
+        -webkit-transition: height ease 0.5s;
+        -moz-transition: height ease 0.5s;
+        -o-transition: height ease 0.5s;
+    }
+
+    .B:hover {
+        height: 400px !important;
+        cursor: pointer;
+        transition: height ease 0.5s;
+        -webkit-transition: height ease 0.5s;
+        -moz-transition: height ease 0.5s;
+        -o-transition: height ease 0.5s;
+    }
+
+    .C:hover {
+        height: 400px !important;
+        cursor: pointer;
+        transition: height ease 0.5s;
+        -webkit-transition: height ease 0.5s;
+        -moz-transition: height ease 0.5s;
+        -o-transition: height ease 0.5s;
+    }
+}
+
+.blank {
+    height: 100%;
+}
+
+.member h1 {
+    text-align: center;
+    font-size: 9rem;
+    font-family: Briko;
+    text-transform: uppercase;
+    animation: Header_Transition 0.6s ease-out;
+}
+.main div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main div h1,h2,i{
+    font-family: Iciel;
+}
+@media screen and (max-width:640px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(150px, auto);
+        grid-gap: 0.5em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        margin-top: 0.5em;
+        padding-bottom: 40px;
+    }
+
+    .main div:nth-child(3n) {
+        background-color: rgb(231, 59, 93);
+        border: 0.3em solid;
+        border-color: rgb(168, 52, 77);
+        border-radius: 1.3em;
+        padding: 1em;
+    }
+
+    .main div:nth-child(3n+1) {
+        background-color: darkseagreen;
+        border: 0.3em solid;
+        border-color: rgb(115, 149, 115);
+        border-radius: 1.3em;
+        padding: 1em;
+    }
+
+    .main div:nth-child(3n+2) {
+        background-color: dodgerblue;
+        border: 0.3em solid;
+        border-color: rgb(22, 103, 184);
+        border-radius: 1.3em;
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width:1280px) and (min-width: 650px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(150px, auto);
+        grid-gap: 0.5em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        margin-top: 0.5em;
+        padding-bottom: 40px;
+    }
+
+    .main div:nth-child(2n) {
+        background-color: rgb(231, 59, 93);
+        border: 0.3em solid;
+        border-color: rgb(168, 52, 77);
+        border-radius: 1.3em;
+        padding: 1em;
+    }
+
+    .main div:nth-child(2n+1) {
+        background-color: darkseagreen;
+        border: 0.3em solid;
+        border-color: rgb(115, 149, 115);
+        border-radius: 1.3em;
+        padding: 1em;
+    }
+}
+
+@media screen and (min-width:1281px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(150px, auto);
+        grid-gap: 0.5em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        margin-top: 0.5em;
+        padding-bottom: 40px;
+    }
+
+    .main div:nth-child(3n) {
+        background-color: rgb(231, 59, 93);
+        border: 0.3em solid;
+        border-color: rgb(168, 52, 77);
+        border-radius: 1.3em;
+        padding: 1em;
+    }
+
+    .main div:nth-child(3n+1) {
+        background-color: darkseagreen;
+        border: 0.3em solid;
+        border-color: rgb(115, 149, 115);
+        border-radius: 1.3em;
+        padding: 1em;
+    }
+
+    .main div:nth-child(3n+2) {
+        background-color: dodgerblue;
+        border: 0.3em solid;
+        border-color: rgb(22, 103, 184);
+        border-radius: 1.3em;
+        padding: 1em;
+    }
+}
+
+.main div h1 {
+    text-align: center;
+}
+
+.main div h2 {
+    text-align: center;
+}
+
+.main div p {
+    text-align: center;
+    font-style: italic;
+}
+
+.purpose h1 {
+    text-align: center;
+    font-size: 9rem;
+    font-family: Briko;
+    text-transform: uppercase;
+}
+
+.purpose p {
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-bottom: 20px;
+    font-family: Spectral;
+    font-size: 1.2rem;
+}
+
+.meventr {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 2em;
+}
+
+.meventl {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 2em;
+    text-align: right;
+}
+
+.meventl i {
+    font-size: 0.8rem;
+}
+
+.meventr i {
+    font-size: 0.8rem;
+}
+
+.event {
+    display: grid;
+    grid-template-columns: 4fr 1fr 4fr;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.event div {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.event img {
+    height: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (min-width:1281px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .ga {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .img {
+        object-fit: contain;
+        width: 400px;
+        cursor: pointer;
+        transition: -webkit-transform 0.25s ease;
+        transition: transform 0.25s ease;
+        opacity: 1;
+    }
+    .gallery div:nth-child(3n+1) > img:active{
+        -webkit-transform: scale(2) translateX(100px);
+        transform: scale(2) translateX(100px);
+    }
+    .gallery div:nth-child(3n+2) > img:active{
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }
+    .gallery div:nth-child(3n) > img:active{
+        -webkit-transform: scale(2) translateX(-100px);
+        transform: scale(2) translateX(-100px);
+    }
+    /*.imgm:active {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+    }
+    .imgl:active{
+        -webkit-transform: scale(2) translateX(100px);
+        transform: scale(2) translateX(100px);
+    }
+    .imgr:active{
+        -webkit-transform: scale(2) translateX(-100px);
+        transform: scale(2) translateX(-100px);
+    }*/
+}
+@media screen and (min-width:650px) and (max-width: 1280px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .gallery div:nth-child(odd) > img:active{
+        -webkit-transform: scale(2) translateX(75px);
+        transform: scale(2) translateX(75px);
+    }
+    .gallery div:nth-child(even) > img:active{
+        -webkit-transform: scale(2) translateX(-75px);
+        transform: scale(2) translateX(-75px);
+    }
+    .ga {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .img {
+        object-fit: contain;
+        width: 300px;
+        cursor: pointer;
+        transition: -webkit-transform 0.25s ease;
+        transition: transform 0.25s ease;
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 640px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .ga {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .img {
+        object-fit: contain;
+        width: 250px;
+        cursor: pointer;
+        transition: -webkit-transform 0.25s ease;
+        transition: transform 0.25s ease;
+        opacity: 1;
+    }
+    .img:active{
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}
