@@ -3,4 +3,3 @@ window.addEventListener("scroll", function(){
     let offsetY = this.window.scrollY;
     Parallax.style.transform = "translateY(" + offsetY + "px)";
 })
-

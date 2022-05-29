@@ -215,19 +215,6 @@
 
 /* Khi media lớn như pc */
 @media screen and (min-width: 801px) {
-    .navbar ul li a {
-        font-size: 20px;
-    }
-
-    .navbar ul li:hover::after {
-        width: 100%;
-        background-color: rgb(255, 96, 96);
-    }
-
-    .navbar ul li a:hover {
-        color: rgb(197, 233, 221);
-    }
-
     .title h1 {
         font-size: 150px;
     }
@@ -243,34 +230,9 @@
     }
 }
 
-/* Chỉnh cỡ  navbar cho phù hợp  */
-@media screen and (max-width: 1080px) {
-    .navbar ul li a {
-        font-size: 15px;
-    }
-
-    .navbar ul li::after {
-        height: 4px;
-    }
-}
-
-@media screen and (max-width: 1020px) {
-    .navbar ul li a {
-        font-size: 13px;
-    }
-
-    .navbar ul li::after {
-        height: 3.3px;
-    }
-}
 
 /* Khi media nhỏ cỡ mobile */
 @media screen and (max-width: 800px) {
-
-    .navbar ul li a,
-    .navbar ul li::after {
-        display: none;
-    }
 
     .title h1 {
         font-size: 76px;
@@ -357,6 +319,7 @@
     font-family: Briko;
     font-size: 4rem;
     font-weight: bold;
+    -webkit-font-smoothing: antialiased;
 }
 
 .t_title p {
@@ -491,7 +454,7 @@
 
 @media screen and (max-width:800px) {
     .A:hover {
-        height: 400px !important;
+        height: 500px !important;
         cursor: pointer;
         transition: height ease 0.5s;
         -webkit-transition: height ease 0.5s;
@@ -500,7 +463,7 @@
     }
 
     .B:hover {
-        height: 400px !important;
+        height: 500px !important;
         cursor: pointer;
         transition: height ease 0.5s;
         -webkit-transition: height ease 0.5s;
@@ -509,7 +472,7 @@
     }
 
     .C:hover {
-        height: 400px !important;
+        height: 500px !important;
         cursor: pointer;
         transition: height ease 0.5s;
         -webkit-transition: height ease 0.5s;
@@ -521,21 +484,19 @@
 .blank {
     height: 100%;
 }
+/*About us Page*/
 
 .member h1 {
     text-align: center;
     font-size: 9rem;
     font-family: Briko;
     text-transform: uppercase;
-    animation: Header_Transition 0.6s ease-out;
 }
 .main div{
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-.main div h1,h2,i{
     font-family: Iciel;
 }
 @media screen and (max-width:640px) {
@@ -668,7 +629,7 @@
     font-family: Spectral;
     font-size: 1.2rem;
 }
-
+/*Event Page*/
 .meventr {
     margin-top: auto;
     margin-bottom: auto;
@@ -682,6 +643,13 @@
     text-align: right;
 }
 
+.meventl p{
+    font-family: Iciel;
+}
+.meventr p{
+    font-family: Iciel;
+}
+
 .meventl i {
     font-size: 0.8rem;
 }
@@ -689,12 +657,57 @@
 .meventr i {
     font-size: 0.8rem;
 }
-
-.event {
-    display: grid;
-    grid-template-columns: 4fr 1fr 4fr;
-    padding-top: 70px;
-    padding-bottom: 70px;
+@media screen and (min-width:970px) {
+    .event {
+        display: grid;
+        grid-template-columns: 5fr 1fr 5fr;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .event img {
+        height: 450px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .meventl h1{
+        font-family: Briko;
+        font-size: 3.6rem;
+        font-weight: bold;
+        -webkit-font-smoothing: antialiased;
+    }
+    .meventr h1{
+        font-family: Briko;
+        font-size: 3.6rem;
+        font-weight: bold;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+@media screen and (max-width:969px) {
+    .event {
+        display: grid;
+        grid-template-columns: 1fr 5fr 15fr;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .event img {
+        height: 700px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .meventl h1{
+        font-family: Briko;
+        font-size: 2.7rem;
+        font-weight: bolder;
+        -webkit-font-smoothing: antialiased;
+    }
+    .meventr h1{
+        font-family: Briko;
+        font-size: 2.7rem;
+        font-weight: bolder;
+        -webkit-font-smoothing: antialiased;
+    }
 }
 
 .event div {
@@ -702,13 +715,13 @@
     height: auto;
     overflow: hidden;
 }
-
-.event img {
-    height: 350px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.ga h1{
+    font-family: Briko;
+    font-size: 3.5em;
+    font-weight: bolder;
+    -webkit-font-smoothing: antialiased;
 }
+
 @media screen and (min-width:1281px) {
     .gallery {
         display: grid;
@@ -740,18 +753,6 @@
         -webkit-transform: scale(2) translateX(-100px);
         transform: scale(2) translateX(-100px);
     }
-    /*.imgm:active {
-        -webkit-transform: scale(2);
-        transform: scale(2);
-    }
-    .imgl:active{
-        -webkit-transform: scale(2) translateX(100px);
-        transform: scale(2) translateX(100px);
-    }
-    .imgr:active{
-        -webkit-transform: scale(2) translateX(-100px);
-        transform: scale(2) translateX(-100px);
-    }*/
 }
 @media screen and (min-width:650px) and (max-width: 1280px) {
     .gallery {
