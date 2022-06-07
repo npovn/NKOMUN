@@ -44,7 +44,7 @@ function loadEvent(){
                     cụ thể ở từng giai đoạn — cổ đại, trung đại, cận đại cũng như biết được khi nào cá nhân trở thành vĩ
                     nhân, Câu lạc bộ Mô phỏng Liên Hợp Quốc trường Phổ Thông Năng Khiếu vô cùng vinh dự được đồng hành
                     cùng các thầy cô tổ bộ môn Lịch sử trường Phổ Thông Năng Khiếu tổ chức chuyên đề "VAI TRÒ CỦA CÁ NH
-                    N TRONG LỊCH SỬ".<br>
+                    ÂN TRONG LỊCH SỬ".<br>
                     Thông qua việc cung cấp kiến thức cơ bản về vai trò của danh nhân trong các giai đoạn của lịch sử
                     đồng thời rèn luyện cho các bạn học sinh có kỹ năng tranh biện khi trao đổi những vấn đề của lịch
                     sử.<br>
@@ -120,7 +120,7 @@ function loadEvent(){
                     cụ thể ở từng giai đoạn — cổ đại, trung đại, cận đại cũng như biết được khi nào cá nhân trở thành vĩ
                     nhân, Câu lạc bộ Mô phỏng Liên Hợp Quốc trường Phổ Thông Năng Khiếu vô cùng vinh dự được đồng hành
                     cùng các thầy cô tổ bộ môn Lịch sử trường Phổ Thông Năng Khiếu tổ chức chuyên đề "VAI TRÒ CỦA CÁ NH
-                    N TRONG LỊCH SỬ".<br>
+                    ÂN TRONG LỊCH SỬ".<br>
                     Thông qua việc cung cấp kiến thức cơ bản về vai trò của danh nhân trong các giai đoạn của lịch sử
                     đồng thời rèn luyện cho các bạn học sinh có kỹ năng tranh biện khi trao đổi những vấn đề của lịch
                     sử.<br>

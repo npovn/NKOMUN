@@ -22,7 +22,10 @@
     font-family: NorthLand;
     src: url(../font/NorthLand.ttf);
 }
-
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../font/Montserrat-Regular.ttf);
+}
 * {
     margin: 0;
     padding: 0;
@@ -123,11 +126,11 @@
 
     .navbar ul li:hover::after {
         width: 100%;
-        background-color: rgb(6, 226, 233);
+        background-color: rgb(88, 172, 223);
     }
 
     .navbar ul li a:hover {
-        color: rgb(243, 17, 35);
+        color: rgb(204, 32, 36);
     }
 }
 
@@ -161,7 +164,7 @@
     }
 
     .Logo {
-        width: 95px;
+        width: 65px;
         height: auto;
     }
 }
@@ -193,9 +196,10 @@ body {
 }
 
 .footer {
-    background-color: #1e241d;
+    background-color: rgb(11, 21, 22);
     padding: 70px 0;
     color: white;
+    font-family: Montserrat-Regular;
 }
 
 .footer a {
