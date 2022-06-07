@@ -4,28 +4,10 @@
 }
 
 @font-face {
-    font-family: Briko;
-    src: url(../font/Briko.ttf);
-}
-
-@font-face {
-    font-family: SVN-Aleo;
-    src: url(../font/SVN-Aleo.ttf);
-}
-
-@font-face {
-    font-family: Spectral;
-    src: url(../font/Spectral.ttf);
-}
-
-@font-face {
-    font-family: NorthLand;
-    src: url(../font/NorthLand.ttf);
-}
-@font-face {
     font-family: Montserrat-Regular;
     src: url(../font/Montserrat-Regular.ttf);
 }
+
 * {
     margin: 0;
     padding: 0;
