@@ -1,0 +1,171 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .view {
+            width: 800px;
+            overflow: hidden;
+            height: 400px;
+            position: relative;
+        }
+
+        .image img {
+            width: 800px;
+            height: 400px;
+        }
+
+        .ss {
+            position: absolute;
+            top: 45%;
+            z-index: 99;
+            width: 40px;
+            height: 40px;
+            opacity: 0.5;
+            background-color: white;
+            border: 0em solid;
+            border-radius: 30px;
+        }
+
+        .ss:hover {
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        .dot-panel {
+            position: absolute;
+            top: 90%;
+            z-index: 99;
+            width: 12%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            height: 40px;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .dot{
+            border: 3px solid;
+            border-color: white;
+            border-radius: 0;
+            background-color: transparent;
+            height: 0px;
+            width: 0px;
+            padding: 3px;
+            display: inline-block;
+            transition: 0.2s;
+            opacity: 0.5;
+        }
+        .dot-selected{
+            border: 3px solid;
+            border-color: white;
+            border-radius: 0;
+            background-color: white;
+            height: 0px;
+            width: 0px;
+            padding: 3px;
+            display: inline-block;
+            transition: 0.2s;
+            opacity: 0.5;
+        }
+        .dot:hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
+        .dot-selected:hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="view">
+        <div id="panel" class="panel"
+            style="height: 100%; position: relative; transform: translateX(0); transition: transform 0.2s;">
+            <a href="https://www.facebook.com/NKOMUN2021" class="image"><img src="./img/index-background.jfif" alt="a"
+                    style="position: absolute; top: 0; left: 0;" loading="eager"></a>
+            <a href="https://www.facebook.com/NKOMUN2021" class="image"><img src="./img/aboutus-background.jpg" alt="b"
+                    style="position: absolute; top: 0; left: 100%;" loading="eager"></a>
+            <a href="https://www.facebook.com/NKOMUN2021" class="image"><img src="./img/event-background.jpg" alt="b"
+                    style="position: absolute; top: 0; left: 200%;" loading="eager"></a>
+            <a href="https://www.facebook.com/NKOMUN2021" class="image"><img src="./img/gallery-background.jpg" alt="b"
+                    style="position: absolute; top: 0; left: 300%;" loading="eager"></a>
+        </div>
+        <img class="ss" src="./img/left.png" onclick="leftClick()" alt="l" style="left:10px;">
+        <img class="ss" src="./img/right.png" onclick="rightClick()" alt="r" style="right: 10px;">
+        <div class="dot-panel">
+            <div class="dot-selected" id="dot0" onclick="gotoPage(0)"></div>
+            <div class="dot" id="dot1" onclick="gotoPage(1)"></div>
+            <div class="dot" id="dot2"onclick="gotoPage(2)"></div>
+            <div class="dot" id="dot3" onclick="gotoPage(3)"></div>
+        </div>
+    </div>
+    <script>
+        var currentVal = 0;
+        var numberOfPics = 4;
+        var autoSwipe = setInterval(function () {
+            turnRight();
+        }, 8000);
+        var turnOnAutoSwipe = null;
+        function controlAutoSwipe(){
+            try {
+                console.log("auto swipe off");
+                clearInterval(autoSwipe);
+                clearTimeout(turnOnAutoSwipe);
+            } catch (error) { }
+            turnOnAutoSwipe = setTimeout(function () {
+                console.log("auto swipe on");
+                autoSwipe = setInterval(function () {
+                    turnRight();
+                }, 8000);
+            }, 4000);
+        }
+        function leftClick(){
+            turnLeft();
+            controlAutoSwipe();
+        }
+        function rightClick(){
+            turnRight();
+            controlAutoSwipe();
+        }
+        function turnLeft() {
+            var panel = document.getElementById("panel");
+            var dotSelected = document.getElementById("dot"+currentVal.toString());
+            dotSelected.className = "dot";
+            currentVal -= 1;
+            if (currentVal < 0) currentVal += numberOfPics;
+            panel.style.transform = "translateX(-" + currentVal.toString() + "00%)";
+            var dotWillSelected = document.getElementById("dot"+currentVal.toString());
+            dotWillSelected.className = "dot-selected";
+        }
+        function turnRight() {
+            var panel = document.getElementById("panel");
+            var dotSelected = document.getElementById("dot"+currentVal.toString());
+            dotSelected.className = "dot";
+            currentVal += 1;
+            if (currentVal >= numberOfPics) currentVal = 0;
+            panel.style.transform = "translateX(-" + currentVal.toString() + "00%)";
+            var dotWillSelected = document.getElementById("dot"+currentVal.toString());
+            dotWillSelected.className = "dot-selected";
+        }
+        function gotoPage(page){
+            controlAutoSwipe();
+            var panel = document.getElementById("panel");
+            var dotSelected = document.getElementById("dot"+currentVal.toString());
+            dotSelected.className = "dot";
+            currentVal = page;
+            panel.style.transform = "translateX(-" + currentVal.toString() + "00%)";
+            var dotWillSelected = document.getElementById("dot"+currentVal.toString());
+            dotWillSelected.className = "dot-selected";
+        }
+    </script>
+</body>
