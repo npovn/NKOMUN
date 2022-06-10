@@ -232,5 +232,6 @@ body {
 @media(max-width: 574px) {
     .footer-col {
         width: 100%;
+        font-size: 0.8rem;
     }
 }
