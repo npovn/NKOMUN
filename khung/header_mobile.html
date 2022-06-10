@@ -1,7 +1,11 @@
 <link rel="stylesheet" href="./css/khung.css">
 <div id="navbar" class="navbar">
     <a href="./index.html"><img src="./img/logo.png" alt="Logo" class="Logo"></a>
-    <img id="more" src="./img/menu.png" alt="more" onclick="loadNavbar()">
+    <div>
+        <a href="./index.html"><img src="./img/VI.png" alt="VI" class="lang" title="Tiếng Việt"></a>
+        <a href="./index.html"><img src="./img/EN.png" alt="EN" class="lang" title="English"></a>
+        <img id="more" src="./img/menu.png" alt="more" onclick="loadNavbar()">
+    </div>
 </div>
 <style>
     #more {
@@ -52,21 +56,35 @@
 
     @media screen and (max-width: 400px) {
         .overlap ul li a {
-            font-family: Briko;
+            font-family: Montserrat-Regular;
             text-decoration: none;
             text-transform: uppercase;
             color: white;
             font-size: 5vh;
         }
     }
+
     @media screen and (min-width: 401px) {
         .overlap ul li a {
-            font-family: Briko;
+            font-family: Montserrat-Regular;
             text-decoration: none;
             text-transform: uppercase;
             color: white;
             font-size: 7vh;
         }
+    }
+
+    .lang {
+        width: 35px;
+        height: 22px;
+        padding-right: 15px;
+        padding-bottom: 2px;
+        transition: all 0.2s ease;
+    }
+
+    .lang:hover {
+        transform: scale(150%);
+        transition: all 0.2s ease;
     }
 </style>
 <script>
@@ -75,12 +93,11 @@
         nav.innerHTML +=
             `<div id="overlap" class="overlap">
                 <div id="navBackground"></div>            
-                <img class="closenav" src="img/close.png" alt="close" onclick="closeNavbar()"> 
+                <img title="Close" class="closenav" src="img/close.png" alt="close" onclick="closeNavbar()"> 
                 <ul>
-                    <li><a href="./index.html"> Home</a></li>
-                    <li><a href="./aboutus.html"> About us</a></li>
-                    <li><a href="./event.html"> Event</a></li>
-                    <li><a href="./gallery.html"> Gallery</a></li>
+                    <li><a href="./index.html" title="Home"> Home</a></li>
+                    <li><a href="./aboutus.html" title="About Us"> About us</a></li>
+                    <li><a href="./gallery.html" title="Gallery"> Gallery</a></li>
                 </ul>
             </div>`;
     }

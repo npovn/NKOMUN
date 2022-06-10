@@ -195,7 +195,7 @@
 @media screen and (max-width: 800px) {
 
     .title h1 {
-        font-size: 76px;
+        font-size: 6.6rem;
     }
 
     .title p {
@@ -260,13 +260,13 @@
 @media screen and (max-width:500px) {
     .member h1 {
         text-align: center;
-        font-size: 6.5rem;
+        font-size: 5rem;
         font-family: BebasNeue-Regular;
         text-transform: uppercase;
     }
     .purpose h1 {
         text-align: center;
-        font-size: 6.5rem;
+        font-size: 5rem;
         font-family: BebasNeue-Regular;
         text-transform: uppercase;
     }
@@ -323,6 +323,15 @@
         border-radius: 1.3em;
         padding: 1em;
     }
+    .main h1{
+        font-size: 1.5rem;
+    }
+    .main h2{
+        font-size: 1.3rem;
+    }
+    .main p{
+        font-size: 0.8rem;
+    }
 }
 
 @media screen and (max-width:1280px) and (min-width: 650px) {
@@ -351,6 +360,12 @@
         border-color: rgb(115, 149, 115);
         border-radius: 1.3em;
         padding: 1em;
+    }
+    .main h1{
+        font-size: 1.7rem;
+    }
+    .main p{
+        font-size: 1rem;
     }
 }
 
