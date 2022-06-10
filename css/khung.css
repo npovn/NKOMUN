@@ -214,18 +214,19 @@ body {
     width: 50px;
 }
 
-.footer-copyright {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 70px;
-    margin-bottom: 0px;
-}
+
 
 /*responsive*/
-@media(max-width: 767px) {
+@media screen and (min-width: 573px) and (max-width: 767px) {
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
+    }
+    .footer-copyright {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 70px;
+        margin-bottom: 0px;
     }
 }
 
@@ -233,5 +234,11 @@ body {
     .footer-col {
         width: 100%;
         font-size: 0.8rem;
+    }
+    .footer-copyright {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 70px;
+        margin-bottom: 0px;
     }
 }
