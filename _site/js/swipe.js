@@ -6,12 +6,10 @@ var autoSwipe = setInterval(function () {
 var turnOnAutoSwipe = null;
 function controlAutoSwipe() {
     try {
-        console.log("auto swipe off");
         clearInterval(autoSwipe);
         clearTimeout(turnOnAutoSwipe);
     } catch (error) { }
     turnOnAutoSwipe = setTimeout(function () {
-        console.log("auto swipe on");
         autoSwipe = setInterval(function () {
             turnRight();
         }, 8000);
