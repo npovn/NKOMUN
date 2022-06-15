@@ -23,10 +23,10 @@
 <script>
     function changeToVN(){
         localStorage.setItem("lang","VN");
-        location.replace(location.pathname.substring(3));
+        location.replace("/NKOMUN/" + location.pathname.substring(3));
     }
     function changeToEN(){
         localStorage.setItem("lang","EN");
-        location.replace(location.pathname.substring(3));
+        location.replace("/NKOMUN/" + location.pathname.substring(3));
     }
 </script>
