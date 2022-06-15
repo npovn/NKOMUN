@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="shortcut icon" href="./img/logo.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="module">
+        if(localStorage.getItem('lang') == null){
+            localStorage.setItem("lang","VN");
+        }
+        else if(localStorage.getItem('lang') == "EN"){
+            location.replace("/ENindex.html");
+        }
+        else if(localStorage.getItem('lang') != "VN"){
+            location.replace("/404.html");
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            if(width <= 800)
+            {
+                $("#navbar").load("khung/header_mobile.html");
+            }
+            else{
+                $("#navbar").load("khung/header.html");
+            }
+            $("#footer").load("khung/"+ localStorage.getItem('lang') +"footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <div class="home">
+        <div class="he">
+            <div class="backgroundcover"></div>
+            <img src="img/background.png" class="parallax" alt="Furniture">
+            <div class="title">
+                <h1>NKOMUN</h1>
+                <p>ĐƯỢC THÀNH LẬP VÀO THÁNG 9 NĂM 2021, CLB MÔ PHỎNG MÔ HÌNH LIÊN HỢP QUỐC TRƯỜNG THPT NĂNG KHIẾU – NKOMUN LÀ MỘT TỔ CHỨC ĐIỀU HÀNH BỞI HỌC SINH, TỌA LẠC Ở TP HCM ĐỂ ĐƯA CÁC HỘI NGHỊ LIÊN HỢP QUỐC ĐẾN VỚI CÁC BẠN TRẺ MỘT CÁCH GẦN GŨI NHẤT.</p>
+            </div>
+        </div>
+        <div class="view">
+            <div id="panel" class="panel"
+                style="height: 100%; position: relative; transform: translateX(0); transition: transform 0.2s;">
+                <a href="https://www.facebook.com/NKOMUN2021" class="image"><img src="./swipeimg/Ảnh chung.JPG"
+                        alt="a" style="position: absolute; top: 0; left: 0;" loading="eager"></a>
+                <a href="https://www.facebook.com/NKOMUN2021" class="image"><img src="./swipeimg/Chủ tọa_Chairs.JPG"
+                        alt="b" style="position: absolute; top: 0; left: 100%;" loading="eager"></a>
+                <a href="https://www.facebook.com/NKOMUN2021" class="image"><img src="./swipeimg/Đại biểu_Delegates.JPG"
+                        alt="b" style="position: absolute; top: 0; left: 200%;" loading="eager"></a>
+                <a href="https://www.facebook.com/NKOMUN2021" class="image"><img src="./swipeimg/Quan sát viên_Observers.JPG"
+                        alt="b" style="position: absolute; top: 0; left: 300%;" loading="eager"></a>
+            </div>
+            <img title="Left" class="ss" src="./img/left.png" onclick="leftClick()" alt="l" style="left:10px;">
+            <img title="Right" class="ss" src="./img/right.png" onclick="rightClick()" alt="r" style="right: 10px;">
+            <div class="dot-panel">
+                <div class="dot-selected" id="dot0" onclick="gotoPage(0)"></div>
+                <div class="dot" id="dot1" onclick="gotoPage(1)"></div>
+                <div class="dot" id="dot2" onclick="gotoPage(2)"></div>
+                <div class="dot" id="dot3" onclick="gotoPage(3)"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="A">
+                <div class="t_title">
+                    <h1>Mô hình MUN</h1>
+                    <div class="Adescription">
+                        <p><br><br>Mô phỏng Liên Hợp Quốc là một hoạt động học thuật phổ biến mang tầm quốc tế, nhằm khuyến khích học sinh tìm hiểu thêm về mối quan hệ quốc tế, ngoại giao cũng như cách thức hoạt động của Liên Hợp Quốc</p>
+                    </div>
+                </div>
+            </div>
+            <div class="B">
+                <div class="t_title">
+                    <h1>Lý do thành lập<br></h1>
+                    <div class="Bdescription">
+                        <p><br><br>Câu lạc bộ Mô phỏng Liên hợp quốc tại trường Phổ Thông Năng Khiếu sẽ góp phần tạo nên một cộng đồng MUN trong khuôn khổ trường học cùng sự phát triển của mô hình MUN hiện nay</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="C">
+                <div class="t_title">
+                    <h1>Mục tiêu của câu lạc bộ<br></h1>
+                    <div class="Cdescription">
+                        <p><br><br>Tạo ra một sân chơi kết nối các bạn học sinh…
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="blank"></div>
+    <div id="footer"></div>
+    <script src="./js/main.js"></script>
+    <script src="./js/swipe.js"></script>
+</body>
+
+</html>

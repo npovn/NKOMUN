@@ -5,8 +5,8 @@
         <li><a href="./index.html" title="Home"> Home</a></li>
         <li><a href="./aboutus.html" title="About Us"> About us</a></li>
         <li><a href="./gallery.html" title="Gallery"> Gallery</a></li>
-        <li><a href="./index.html"><img src="./img/VI.png" alt="VI" class="lang" title="Tiếng Việt"></a></li>
-        <li><a href="./index.html"><img src="./img/EN.png" alt="EN" class="lang" title="English"></a></li>
+        <li><img src="./img/VI.png" alt="VI" class="lang" title="Tiếng Việt" onclick="changeToVN()"></li>
+        <li><img src="./img/EN.png" alt="EN" class="lang" title="English" onclick="changeToEN()"></li>
     </ul>
 </div>
 <style>
@@ -20,3 +20,13 @@
         transition: all 0.2s ease;
     }
 </style>
+<script>
+    function changeToVN(){
+        localStorage.setItem("lang","VN");
+        location.replace(location.pathname.substring(3));
+    }
+    function changeToEN(){
+        localStorage.setItem("lang","EN");
+        location.replace(location.pathname.substring(3));
+    }
+</script>

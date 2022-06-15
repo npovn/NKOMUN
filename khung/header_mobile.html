@@ -2,8 +2,8 @@
 <div id="navbar" class="navbar">
     <a href="./index.html"><img src="./img/logo.png" alt="Logo" class="Logo"></a>
     <div>
-        <a href="./index.html"><img src="./img/VI.png" alt="VI" class="lang" title="Tiếng Việt"></a>
-        <a href="./index.html"><img src="./img/EN.png" alt="EN" class="lang" title="English"></a>
+        <img src="./img/VI.png" alt="VI" class="lang" title="Tiếng Việt" onclick="changeToVN()">
+        <img src="./img/EN.png" alt="EN" class="lang" title="English" onclick="changeToEN()">
         <img id="more" src="./img/menu.png" alt="more" onclick="loadNavbar()">
     </div>
 </div>
@@ -103,5 +103,15 @@
     }
     function closeNavbar() {
         document.getElementById("navbar").removeChild(document.getElementById("overlap"));
+    }
+</script>
+<script>
+    function changeToVN(){
+        localStorage.setItem("lang","VN");
+        location.replace(location.pathname.substring(3));
+    }
+    function changeToEN(){
+        localStorage.setItem("lang","EN");
+        location.replace(location.pathname.substring(3));
     }
 </script>

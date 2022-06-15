@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/logo.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="module">
+        if(localStorage.getItem('lang') == null){
+            localStorage.setItem("lang","VN");
+            location.replace("/VNgallery.html");
+        }
+        else if(localStorage.getItem('lang') == "VN"){
+            location.replace("/VNgallery.html");
+        }
+        else if(localStorage.getItem('lang') != "EN"){
+            location.replace("/404.html");
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            if(width <= 800)
+            {
+                $("#navbar").load("khung/header_mobile.html");
+            }
+            else{
+                $("#navbar").load("khung/header.html");
+            }
+            $("#footer").load("khung/"+ localStorage.getItem('lang') +"footer.html");
+        });
+    </script>
+</head>
+<body style="background-color: rgba(0,0,0,0.2)">
+    <div id="navbar"></div>
+    <div class="home">
+        <div class="backgroundcover"></div>
+        <img src="img/background.png" class="parallax" alt="Furniture">
+        <div class="title">
+            <h1>Gallery</h1>
+            <p>HERE ARE SOME PICTURES FROM OUR LATEST EVENTS </p>
+        </div>
+    </div>
+    <div class="blank"></div>
+    <div class="gallery">
+        <div class="ga">
+            <img class="img" src="gallery-img/Talkshow_ Retreat of the tiger .png" alt="h1">
+            <h1>Talkshow: Retreat of the tiger</h1>
+        </div>
+        <div class="ga">
+            <img class="img" src="gallery-img/Chuyên đề Sử_ Vai trò của cá nhân trong Lịch sử .png" alt="h2">
+            <h1>Chuyên đề Sử: Vai trò của cá nhân trong Lịch sử</h1>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="./js/main.js"></script>
+</body>
