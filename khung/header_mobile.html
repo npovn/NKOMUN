@@ -108,10 +108,10 @@
 <script>
     function changeToVN(){
         localStorage.setItem("lang","VN");
-        location.replace("/NKOMUN/" + location.pathname.substring(3));
+        location.replace(location.pathname.replace("EN","VN"));
     }
     function changeToEN(){
         localStorage.setItem("lang","EN");
-        location.replace("/NKOMUN/" + location.pathname.substring(3));
+        location.replace(location.pathname.replace("VN","EN"));
     }
 </script>
