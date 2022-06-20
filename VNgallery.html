@@ -13,10 +13,10 @@
             localStorage.setItem("lang","VN");
         }
         else if(localStorage.getItem('lang') == "EN"){
-            location.replace("/NKOMUN/ENgallery.html");
+            location.replace("/ENgallery.html");
         }
         else if(localStorage.getItem('lang') != "VN"){
-            location.replace("/NKOMUN/404.html");
+            location.replace("/404.html");
         }
     </script>
     <script>
@@ -44,16 +44,16 @@
         </div>
     </div>
     <div class="blank"></div>
-    <div class="gallery">
-        <div class="ga">
-            <img class="img" src="gallery-img/Talkshow_ Retreat of the tiger .png" alt="h1">
-            <h1>Talkshow: Retreat of the tiger</h1>
+    <div class="gallery" id="gallery">
+        <div class="ga" onclick="infoGallery('./gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/', 'MOCK MUN #1 21-05-2022', 'NKO MUN không chỉ có tình yêu - NKO MUN còn nhiều điều hơn thế<br>Vào thứ 7 (21/05/2022) vừa qua, NKO MUN đã có một buổi Training và Showcase Mock MUN diễn ra tại phòng A302.')">
+            <img class="img" src="./gallery-img/MOCKMUN1-21-05-2022/Ảnh chung/Ảnh chung.JPG" alt="anhchung">
         </div>
-        <div class="ga">
-            <img class="img" src="gallery-img/Chuyên đề Sử_ Vai trò của cá nhân trong Lịch sử .png" alt="h2">
-            <h1>Chuyên đề Sử: Vai trò của cá nhân trong Lịch sử</h1>
+        <div class="gb" style="cursor: pointer;" onclick="infoGallery('./gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/', 'MOCK MUN #1 21-05-2022', 'NKO MUN không chỉ có tình yêu - NKO MUN còn nhiều điều hơn thế<br>Vào thứ 7 (21/05/2022) vừa qua, NKO MUN đã có một buổi Training và Showcase Mock MUN diễn ra tại phòng A302.')">
+            <h1>MOCK MUN #1 (21-05-2022)</h1>
+            <p><br><br>NKO MUN không chỉ có tình yêu<br>NKO MUN còn nhiều điều hơn thế<br>Vào thứ 7 (21/05/2022) vừa qua, NKO MUN đã có một buổi Training và Showcase Mock MUN diễn ra tại phòng A302.</p>
         </div>
     </div>
     <div id="footer"></div>
     <script src="./js/main.js"></script>
+    <script src="./js/gallery.js"></script>
 </body>

@@ -9,31 +9,31 @@
     <link rel="shortcut icon" href="./img/logo.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="module">
-        if(localStorage.getItem('lang') == null){
-            localStorage.setItem("lang","VN");
-            location.replace("/NKOMUN/VNgallery.html");
+        if (localStorage.getItem('lang') == null) {
+            localStorage.setItem("lang", "VN");
+            location.replace("/VNgallery.html");
         }
-        else if(localStorage.getItem('lang') == "VN"){
-            location.replace("/NKOMUN/VNgallery.html");
+        else if (localStorage.getItem('lang') == "VN") {
+            location.replace("/VNgallery.html");
         }
-        else if(localStorage.getItem('lang') != "EN"){
-            location.replace("/NKOMUN/404.html");
+        else if (localStorage.getItem('lang') != "EN") {
+            location.replace("/404.html");
         }
     </script>
     <script>
         $(document).ready(function () {
             var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-            if(width <= 800)
-            {
+            if (width <= 800) {
                 $("#navbar").load("khung/header_mobile.html");
             }
-            else{
+            else {
                 $("#navbar").load("khung/header.html");
             }
-            $("#footer").load("khung/"+ localStorage.getItem('lang') +"footer.html");
+            $("#footer").load("khung/" + localStorage.getItem('lang') + "footer.html");
         });
     </script>
 </head>
+
 <body style="background-color: rgba(0,0,0,0.2)">
     <div id="navbar"></div>
     <div class="home">
@@ -45,16 +45,16 @@
         </div>
     </div>
     <div class="blank"></div>
-    <div class="gallery">
-        <div class="ga">
-            <img class="img" src="gallery-img/Talkshow_ Retreat of the tiger .png" alt="h1">
-            <h1>Talkshow: Retreat of the tiger</h1>
+    <div class="gallery" id="gallery">
+        <div class="ga" onclick="infoGallery('./gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/', 'MOCK MUN #1 21-05-2022', 'NKO MUN is not only about love - NKO MUN is much more than that<br>Last Saturday (May 21, 2022), NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.')">
+            <img class="img" src="./gallery-img/MOCKMUN1-21-05-2022/Ảnh chung/Ảnh chung.JPG" alt="anhchung">
         </div>
-        <div class="ga">
-            <img class="img" src="gallery-img/Chuyên đề Sử_ Vai trò của cá nhân trong Lịch sử .png" alt="h2">
-            <h1>Chuyên đề Sử: Vai trò của cá nhân trong Lịch sử</h1>
+        <div class="gb" style="cursor: pointer;" onclick="infoGallery('./gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/', 'MOCK MUN #1 21-05-2022', 'NKO MUN is not only about love - NKO MUN is much more than that<br>Last Saturday (May 21, 2022), NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.')">
+            <h1>MOCK MUN #1 (21-05-2022)</h1>
+            <p><br><br>NKO MUN is not only about love<br>NKO MUN is much more than that<br>Last Saturday (May 21, 2022), NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.</p>
         </div>
     </div>
     <div id="footer"></div>
     <script src="./js/main.js"></script>
+    <script src="./js/gallery.js"></script>
 </body>
