@@ -575,15 +575,26 @@
 
 
 @media screen and (min-width:1281px) {
-    .gallery {
+    .g {
         display: grid;
         grid-template-columns: 1fr 2fr;
+        -o-transform: translateY(20%);
+        -moz-transform: translateY(20%);
+        -ms-transform: translateY(20%);
+        -webkit-transform: translateY(20%);
+        transform: translateY(20%);
+        opacity: 0;
+        transition: all 0.75s;
     }
 
     .ga {
         text-align: center;
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+    .gb p{
+        padding-left: 14vw;
+        padding-right: 14vw;
     }
     .gb h1 {
         font-size: 3.5em;
@@ -605,9 +616,16 @@
 }
 
 @media screen and (min-width:650px) and (max-width: 1280px) {
-    .gallery {
+    .g{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        -o-transform: translateY(20%);
+        -moz-transform: translateY(20%);
+        -ms-transform: translateY(20%);
+        -webkit-transform: translateY(20%);
+        transform: translateY(20%);
+        opacity: 0;
+        transition: all 0.75s;
     }
     .gb h1{
         font-size: 2.5em;
@@ -639,9 +657,18 @@
 
 @media screen and (max-width: 640px) {
     .gallery {
+        padding-top: 80px;
+    }
+    .g{
         display: grid;
         grid-template-columns: 1fr;
-        padding-top: 80px;
+        -o-transform: translateY(20%);
+        -moz-transform: translateY(20%);
+        -ms-transform: translateY(20%);
+        -webkit-transform: translateY(20%);
+        transform: translateY(20%);
+        opacity: 0;
+        transition: all 0.75s;
     }
     .gb h1{
         font-size: 2em;
@@ -730,7 +757,7 @@
     }
     .img-title img{
         object-fit: contain;
-        width: 330px;
+        width: 23vw;
     }
     .img-title h2{
         text-align: center;
@@ -788,7 +815,7 @@
     .info-box h2 {
         text-align: center;
         font-family: BebasNeue-Regular;
-        font-size: 2vh;
+        font-size: 4vh;
     }
 
     .info-box p {
@@ -809,12 +836,12 @@
     }
     .img-title img{
         object-fit: contain;
-        width: 150px;
+        width: 55vw;
     }
     .img-title h2{
         text-align: center;
         font-family: BebasNeue-Regular;
-        font-size: 4vh;
+        font-size: 3vh;
         font-weight: normal;
     }
 }
