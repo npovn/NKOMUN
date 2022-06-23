@@ -2,7 +2,7 @@ function infoGallery1(folder, name, description) {
     document.getElementById("gallery").innerHTML +=
         `<div id="gallery-pop" class="gallery-pop">
         <div class="gallery-popback" onclick=closeGallery()></div>
-        <div class="info-box">
+        <div class="info-box" id="info-box">
             <h2>${name}</h2>
             <p>${description}</p>
             <div class="table">
@@ -21,12 +21,15 @@ function infoGallery1(folder, name, description) {
             </div>
         <div>
     </div>`;
+    setTimeout(() => {
+        document.getElementById("info-box").style.opacity = "1";
+    }, 1);
 }
 function infoGallery2(folder, name, description) {
     document.getElementById("gallery").innerHTML +=
         `<div id="gallery-pop" class="gallery-pop">
         <div class="gallery-popback" onclick=closeGallery()></div>
-        <div class="info-box">
+        <div class="info-box" id="info-box">
             <h2>${name}</h2>
             <p>${description}</p>
             <div class="table">
@@ -45,6 +48,9 @@ function infoGallery2(folder, name, description) {
             </div>
         <div>
     </div>`;
+    setTimeout(() => {
+        document.getElementById("info-box").style.opacity = "1";
+    }, 1);
 }
 function closeGallery() {
     document.getElementById("gallery").removeChild(document.getElementById("gallery-pop"));
