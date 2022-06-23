@@ -13,12 +13,13 @@
             localStorage.setItem("lang","VN");
         }
         else if(localStorage.getItem('lang') == "EN"){
-            location.replace("/NKOMUN/ENindex.html");
+            location.replace("/ENindex.html");
         }
         else if(localStorage.getItem('lang') != "VN"){
-            location.replace("/NKOMUN/404.html");
+            location.replace("/404.html");
         }
     </script>
+    <script src="./js/lazyload.js"></script>
     <script>
         $(document).ready(function () {
             var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -30,6 +31,12 @@
                 $("#navbar").load("khung/header.html");
             }
             $("#footer").load("khung/"+ localStorage.getItem('lang') +"footer.html");
+            $(window).scroll(function () {
+                lazyload("view");
+                lazyload("A");
+                lazyload("B");
+                lazyload("C");
+            });
         });
     </script>
 </head>
@@ -45,7 +52,7 @@
                 <p>ĐƯỢC THÀNH LẬP VÀO THÁNG 9 NĂM 2021, CLB MÔ PHỎNG MÔ HÌNH LIÊN HỢP QUỐC TRƯỜNG THPT NĂNG KHIẾU – NKOMUN LÀ MỘT TỔ CHỨC ĐIỀU HÀNH BỞI HỌC SINH, TỌA LẠC Ở TP HCM ĐỂ ĐƯA CÁC HỘI NGHỊ LIÊN HỢP QUỐC ĐẾN VỚI CÁC BẠN TRẺ MỘT CÁCH GẦN GŨI NHẤT.</p>
             </div>
         </div>
-        <div class="view">
+        <div class="view" id="view">
             <div id="panel" class="panel"
                 style="height: 100%; position: relative; transform: translateX(0); transition: transform 0.2s;">
                 <a href="https://www.facebook.com/NKOMUN2021" class="image"><img src="./swipeimg/Ảnh chung.JPG"
@@ -67,7 +74,7 @@
             </div>
         </div>
         <div class="content">
-            <div class="A">
+            <div class="A" id="A">
                 <div class="t_title">
                     <h1>Mô hình MUN</h1>
                     <div class="Adescription">
@@ -75,7 +82,7 @@
                     </div>
                 </div>
             </div>
-            <div class="B">
+            <div class="B" id="B">
                 <div class="t_title">
                     <h1>Lý do thành lập<br></h1>
                     <div class="Bdescription">
@@ -84,7 +91,7 @@
                 </div>
 
             </div>
-            <div class="C">
+            <div class="C" id="C">
                 <div class="t_title">
                     <h1>Mục tiêu của câu lạc bộ<br></h1>
                     <div class="Cdescription">

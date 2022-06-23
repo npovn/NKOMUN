@@ -10,6 +10,5 @@ function lazyload(id) {
             ele.style.transform = "translateY(0)";
             ele.style.opacity = "1";
         }, 100);
-        console.log("effect");
     }
 }

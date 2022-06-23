@@ -1,25 +1,25 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="./css/home.css">
-    <link rel="shortcut icon" href="./img/logo.ico">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="shortcut icon" href="../img/logo.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="module">
         if(localStorage.getItem('lang') == null){
             localStorage.setItem("lang","VN");
-            location.replace("/NKOMUN/VNindex.html");
+            location.replace("/VNindex.html");
         }
         else if(localStorage.getItem('lang') == "VN"){
-            location.replace("/NKOMUN/VNindex.html");
+            location.replace("/VNindex.html");
         }
         else if(localStorage.getItem('lang') != "EN"){
-            location.replace("/NKOMUN/404.html");
+            location.replace("/404.html");
         }
     </script>
+    <script src="./js/lazyload.js"></script>
     <script>
         $(document).ready(function () {
             var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -31,6 +31,12 @@
                 $("#navbar").load("khung/header.html");
             }
             $("#footer").load("khung/"+ localStorage.getItem('lang') +"footer.html");
+            $(window).scroll(function () {
+                lazyload("view");
+                lazyload("A");
+                lazyload("B");
+                lazyload("C");
+            });
         });
     </script>
 </head>
@@ -46,7 +52,7 @@
                 <p>FOUNDED IN SEPTEMBER 2021, NANG KHIEU OPEN MODEL UNITED NATIONS - NKOMUN IS A STUDENT-RUN ORGANIZATION LOCATED IN HCMC TO BRING THE CONCEPT OF MUN CONFERENCES CLOSER TO YOUNGSTERS AS WHOLEHEARTEDLY AS POSSIBLE.</p>
             </div>
         </div>
-        <div class="view">
+        <div class="view" id="view">
             <div id="panel" class="panel"
                 style="height: 100%; position: relative; transform: translateX(0); transition: transform 0.2s;">
                 <a href="https://www.facebook.com/NKOMUN2021" class="image"><img src="./swipeimg/Ảnh chung.JPG"
@@ -68,7 +74,7 @@
             </div>
         </div>
         <div class="content">
-            <div class="A">
+            <div class="A" id="A">
                 <div class="t_title">
                     <h1>MODEL UNITED NATIONS</h1>
                     <div class="Adescription">
@@ -76,7 +82,7 @@
                     </div>
                 </div>
             </div>
-            <div class="B">
+            <div class="B" id="B">
                 <div class="t_title">
                     <h1>WHY NKOMUN WAS FOUNDED<br></h1>
                     <div class="Bdescription">
@@ -85,17 +91,14 @@
                 </div>
 
             </div>
-            <div class="C">
+            <div class="C" id="C">
                 <div class="t_title">
                     <h1>OUR PURPOSES<br></h1>
                     <div class="Cdescription">
                         <p><br><br>To organize a place for students to connect …</p>
                     </div>
                 </div>
-
-
             </div>
-
         </div>
     </div>
     <div class="blank"></div>

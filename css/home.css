@@ -419,14 +419,35 @@
 
 .A {
     position: relative;
+    -webkit-transform: translateY(20%);
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    -o-transform: translateY(20%);
+    transform: translateY(20%);
+    opacity: 0;
+    transition: all 0.75s;
 }
 
 .B {
     position: relative;
+    -webkit-transform: translateY(20%);
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    -o-transform: translateY(20%);
+    transform: translateY(20%);
+    opacity: 0;
+    transition: all 0.75s;
 }
 
 .C {
     position: relative;
+    -webkit-transform: translateY(20%);
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    -o-transform: translateY(20%);
+    transform: translateY(20%);
+    opacity: 0;
+    transition: all 0.75s;
 }
 
 .t_title {
@@ -666,6 +687,15 @@
 }
 
 /*Swipe thing*/
+.view{
+    -webkit-transform: translateY(20%);
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    -o-transform: translateY(20%);
+    transform: translateY(20%);
+    opacity: 0;
+    transition: all 0.75s;
+}
 @media screen and (min-width:801px) {
     .view {
         width: 76vw;

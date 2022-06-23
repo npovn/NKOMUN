@@ -13,12 +13,13 @@
             localStorage.setItem("lang","VN");
         }
         else if(localStorage.getItem('lang') == "EN"){
-            location.replace("/NKOMUN/ENaboutus.html");
+            location.replace("/ENaboutus.html");
         }
         else if(localStorage.getItem('lang') != "VN"){
-            location.replace("/NKOMUN/404.html");
+            location.replace("/404.html");
         }
     </script>
+    <script src="./js/lazyload.js"></script>
     <script>
         $(document).ready(function () {
             var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -30,6 +31,18 @@
                 $("#navbar").load("khung/header.html");
             }
             $("#footer").load("khung/"+ localStorage.getItem('lang') +"footer.html");
+            $(window).scroll(function () {
+                lazyload("memheader");
+                lazyload("a");
+                lazyload("b");
+                lazyload("c");
+                lazyload("d");
+                lazyload("e");
+                lazyload("f");
+                lazyload("g");
+                lazyload("a");
+                lazyload("purpose");
+            });
         });
     </script>
 </head>
@@ -45,7 +58,7 @@
         </div>
     </div>
     <div class="blank"></div>
-    <div class="member"><h1>Members</h1></div>
+    <div class="member" id="memheader"><h1>Members</h1></div>
     <div class="main">
         <div id="a">
             <h1>Nguyễn Phúc Huy Bảo</h1>
@@ -81,7 +94,7 @@
             <h2>Phó ban Public Relations-Media</h2>
         </div>
     </div>
-    <div class="purpose">
+    <div class="purpose" id="purpose">
         <h1>Purpose</h1>
         <p>Với tinh thần mong mỏi được lan tỏa chiếc hoạt động ngoại khóa này đến với mọi người, NKOMUN sẽ tổ chức vô số các cuộc hội thảo để hỗ trợ cho những học sinh mới tham gia thực hành những phần mà họ thường cho là khá khó, giúp họ có sự chuẩn bị kĩ càng cho Hội nghị chính thức. Chúng tôi ngoài ra còn tổ chức các Mock MUN - những hội nghị qui mô nhỏ để các bạn có thêm kinh nghiệm thực hành cũng như tìm được cho mình những người có cùng sở thích và quan điểm, những người có thể sẽ trở thành “anh em chí cốt” của mình. Hơn thế nữa, được tổ chức một hội nghị NKOMUN chính thức cũng chính là ước mơ lớn nhất của chúng tôi!</p>
     </div>
