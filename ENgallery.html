@@ -20,6 +20,7 @@
             location.replace("/404.html");
         }
     </script>
+    <script src="./js/lazyload.js"></script>
     <script>
         $(document).ready(function () {
             var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -30,6 +31,11 @@
                 $("#navbar").load("khung/header.html");
             }
             $("#footer").load("khung/" + localStorage.getItem('lang') + "footer.html");
+            $(window).scroll(function () {
+                for (let index = 1; index <= 1; index++) {
+                    lazyload("g" + index.toString());
+                }
+            });
         });
     </script>
 </head>
@@ -46,12 +52,18 @@
     </div>
     <div class="blank"></div>
     <div class="gallery" id="gallery">
-        <div class="ga" onclick="infoGallery('./gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/', 'MOCK MUN #1 21-05-2022', 'NKO MUN is not only about love - NKO MUN is much more than that<br>Last Saturday (May 21, 2022), NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.')">
-            <img class="img" src="./gallery-img/MOCKMUN1-21-05-2022/Ảnh chung/Ảnh chung.JPG" alt="anhchung">
-        </div>
-        <div class="gb" style="cursor: pointer;" onclick="infoGallery('./gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/', 'MOCK MUN #1 21-05-2022', 'NKO MUN is not only about love - NKO MUN is much more than that<br>Last Saturday (May 21, 2022), NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.')">
-            <h1>MOCK MUN #1 (21-05-2022)</h1>
-            <p><br><br>NKO MUN is not only about love<br>NKO MUN is much more than that<br>Last Saturday (May 21, 2022), NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.</p>
+        <div class="g" id="g1">
+            <div class="ga"
+                onclick="infoGallery1('./gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/', 'MOCK MUN #1 21-05-2022', 'NKO MUN is not only about love - NKO MUN is much more than that<br>Last Saturday (May 21, 2022), NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.')">
+                <img class="img" src="./gallery-img/MOCKMUN1-21-05-2022/Ảnh chung/Ảnh chung.JPG" alt="anhchung">
+            </div>
+            <div class="gb" style="cursor: pointer;"
+                onclick="infoGallery1('./gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/', 'MOCK MUN #1 21-05-2022', 'NKO MUN is not only about love - NKO MUN is much more than that<br>Last Saturday (May 21, 2022), NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.')">
+                <h1>MOCK MUN #1 (21-05-2022)</h1>
+                <p><br><br>NKO MUN is not only about love<br>NKO MUN is much more than that<br>Last Saturday (May 21,
+                    2022),
+                    NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.</p>
+            </div>
         </div>
     </div>
     <div id="footer"></div>
