@@ -860,7 +860,7 @@
     }
     .img-title img{
         object-fit: contain;
-        width: 55vw;
+        height: 20vh;
     }
     .img-title h2{
         text-align: center;
