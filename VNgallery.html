@@ -32,7 +32,7 @@
             }
             $("#footer").load("khung/"+ localStorage.getItem('lang') +"footer.html");
             $(window).scroll(function () {
-                for (let index = 1; index <= 1; index++) {
+                for (let index = 1; index <= 4; index++) {
                     lazyload("g" + index.toString());
                 }
             });
@@ -52,12 +52,34 @@
     <div class="blank"></div>
     <div class="gallery" id="gallery" style="background-color: rgba(0,0,0,0.7);">
         <div class= "g" id="g1">
-            <div class="ga" onclick="infoGallery2('./gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/', 'MOCK MUN #1 21-05-2022', 'NKO MUN không chỉ có tình yêu - NKO MUN còn nhiều điều hơn thế<br>Vào thứ 7 (21/05/2022) vừa qua, NKO MUN đã có một buổi Training và Showcase Mock MUN diễn ra tại phòng A302.')">
-                <img class="img" src="./gallery-img/MOCKMUN1-21-05-2022/Ảnh chung/Ảnh chung.JPG" alt="anhchung">
-            </div>
-            <div class="gb" style="cursor: pointer; color: white;" onclick="infoGallery2('./gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/', 'MOCK MUN #1 21-05-2022', 'NKO MUN không chỉ có tình yêu - NKO MUN còn nhiều điều hơn thế<br>Vào thứ 7 (21/05/2022) vừa qua, NKO MUN đã có một buổi Training và Showcase Mock MUN diễn ra tại phòng A302.')" >
+            <img class="img" onclick="infoGallery(0, 'vi')" src="./gallery-img/MOCKMUN1-21-05-2022/Ảnh chung/Ảnh chung.JPG" alt="anhchung">
+            <div class="gb" style="cursor: pointer; color: white;" onclick="infoGallery(0, 'vi')" >
                 <h1>MOCK MUN #1 (21-05-2022)</h1>
                 <p><br>NKO MUN không chỉ có tình yêu<br>NKO MUN còn nhiều điều hơn thế<br>Vào thứ 7 (21/05/2022) vừa qua, NKO MUN đã có một buổi Training và Showcase Mock MUN diễn ra tại phòng A302.</p>
+            </div>
+        </div>
+        <div class="g" id="g2" style="flex-direction: row-reverse;">
+            <img class="img" src="./gallery-img/TALKSHOW_RETREAT-OF-THE-TIGER/Ảnh chung/Ảnh chung.jpg" alt="anhchung" onclick='infoGallery(0, "en")'>
+            <div class="gb" style="cursor: pointer; color: white;"
+                onclick="infoGallery(1, 'en')">
+                <h1>TALKSHOW: RETREAT OF THE TIGER</h1>
+                <p>Lấy bối cảnh vào khoảng thế kỉ 19, khi chủ nghĩa thực dân phát triển và gây ra các hệ quả ảnh hưởng đến nhiều mặt của cuộc sống và con người; khi mà các nền kinh tế phụ thuộc phát triển mạnh, các nền kinh tế bị chuyên môn hóa và thay đổi hoàn toàn nhiều thứ trong xã hội cũ, trong đó có hệ sinh thái. Đồng thời, đây cũng là một trong những lý do chính yếu dẫn đến Chiến tranh Thế giới thứ nhất.  Talkshow "Retreat of The tiger" (tạm dịch: sự trở lại của loài hổ) ra đời nhằm giới thiệu mô hình mô phỏng Liên Hợp Quốc đến cho học sinh của trường Phổ Thông Năng Khiếu và học sinh thuộc các trường THPT trong và ngoài thành phố Hồ Chí Minh, đi kèm với đó là tạo cơ hội cho các bạn có sở thích với Mô phỏng Liên Hợp Quốc và các phạm trù liên quan như Lịch Sử, Kinh Tế,… cùng chia sẻ và bàn luận.</p>
+            </div>
+        </div>
+        <div class="g" id="g3">
+            <img class="img" onclick='infoGallery(2, "en")' src="./gallery-img/TALKSHOW_RETREAT-OF-THE-TIGER/Ảnh chung/Ảnh chung.jpg" alt="anhchung">
+            <div class="gb" style="cursor: pointer; color: white;"
+                onclick="infoGallery(2, 'en')">
+                <h1>TALKSHOW: VAI TRÒ CỦA CÁ NHÂN TRONG LỊCH SỬ</h1>
+                <p>Liệu bạn đã từng thắc mắc...<br>Khái niệm cá nhân, vĩ nhân?<br>Vĩ nhân làm nên lịch sử? Hay lịch sử tạo nên vĩ nhân?<br>Quần chúng với lịch sử? Cá nhân trong quần chúng<br>Dù câu trả lời là gì đi nữa, thì sự kiện lần này luôn dành cho bạn đó! Nhằm làm rõ vai trò của cá nhân trong lịch sử thông qua những trường hợp cụ thể ở từng giai đoạn — cổ đại, trung đại, cận đại cũng như biết được khi nào cá nhân trở thành vĩ nhân, Câu lạc bộ Mô phỏng Liên Hợp Quốc trường Phổ Thông Năng Khiếu vô cùng vinh dự được đồng hành cùng các thầy cô tổ bộ môn Lịch sử trường Phổ Thông Năng Khiếu tổ chức chuyên đề "VAI TRÒ CỦA CÁ NHÂN TRONG LỊCH SỬ".</p>
+            </div>
+        </div>
+        <div class="g" id="g4" style="flex-direction: row-reverse;">
+            <img class="img" onclick='infoGallery(2, "en")' src="./gallery-img/TALKSHOW_RETREAT-OF-THE-TIGER/Ảnh chung/Ảnh chung.jpg" alt="anhchung">
+            <div class="gb" style="cursor: pointer; color: white;"
+                onclick="infoGallery(2, 'en')">
+                <h1>RENMUN</h1>
+                <p>Ngày 17, 18 và 19/6 vừa qua, các học sinh từ Câu lạc bộ Mô phỏng Liên Hợp Quốc trường Phổ Thông Năng Khiếu (Năng Khiếu Open Model United Nations) đã tham dự Hội nghị Liên Hợp Quốc Mô phỏng tại trường Quốc tế Renaissance (Quận 7). <br>Cùng tham gia sự kiện lần này, có đoàn học sinh từ trường Quốc tế Việt Úc (VAS), trường Quốc tế Hàn Quốc (KIS) và trường Song ngữ Quốc tế (EMASI). <br>Các học sinh được “vào vai” thành đại biểu, đại diện cho mỗi đất nước, được chia thành 4 hội đồng, cùng thảo luận và tranh luận các vấn đề như:<br>   + Hội đồng Bảo an (Security Council – SC): Tình hình của Mali; Tình hình của Cộng hòa dân chủ Congo; …<br>   + Hội đồng Nhân quyền (Human Rights Council – HRC): Tình hình ở Cộng hòa Dân chủ Congo HRC; Vấn đề giáo dục của các dân tộc thiểu số ở Đông Nam Á, Tự do ngôn luận trong kỷ nguyên kỹ thuật số; …<br>   + Hội đồng Giả tưởng Lịch sử (Historical Council – HC): Tình hình ở Bắc Ireland (1967-1998); Phản ứng của Quốc tế đối với vụ đánh bom ngày 11/9; …<br>   + Đại Hội đồng 1 (General Assembly – GA1): Các loại thuốc gây nghiện bị Thế giới cấm; hay đổi về nhân khẩu học trong thế kỷ 21; Đảm bảo hòa bình trong vũ trụ<br>Sự kiện lần này mang lại cho các bạn học sinh những trải nghiệm mới mẻ, có cơ hội được thể hiện quan điểm cá nhân của mình bằng tiếng Anh với các bạn đồng trang lứa trong suốt 03 ngày làm việc, cùng giao lưu, kết bạn với các trường Quốc tế.<br>Dưới đây là một số hình ảnh trong 03 ngày làm việc của các bạn đại biểu.</p>
             </div>
         </div>
     </div>

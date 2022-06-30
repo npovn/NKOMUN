@@ -32,7 +32,7 @@
             }
             $("#footer").load("khung/" + localStorage.getItem('lang') + "footer.html");
             $(window).scroll(function () {
-                for (let index = 1; index <= 1; index++) {
+                for (let index = 1; index <= 4; index++) {
                     lazyload("g" + index.toString());
                 }
             });
@@ -53,16 +53,37 @@
     <div class="blank"></div>
     <div class="gallery" id="gallery" style="background-color: rgba(0,0,0,0.7);">
         <div class="g" id="g1">
-            <div class="ga"
-                onclick="infoGallery1('./gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/', 'MOCK MUN #1 21-05-2022', 'NKO MUN is not only about love - NKO MUN is much more than that<br>Last Saturday (May 21, 2022), NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.')">
-                <img class="img" src="./gallery-img/MOCKMUN1-21-05-2022/Ảnh chung/Ảnh chung.JPG" alt="anhchung">
-            </div>
+            <img class="img" onclick='infoGallery(0, "en")' src="./gallery-img/MOCKMUN1-21-05-2022/Ảnh chung/Ảnh chung.JPG" alt="anhchung">
             <div class="gb" style="cursor: pointer; color: white;"
-                onclick="infoGallery1('./gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/', 'MOCK MUN #1 21-05-2022', 'NKO MUN is not only about love - NKO MUN is much more than that<br>Last Saturday (May 21, 2022), NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.')">
+                onclick="infoGallery(0, 'en')">
                 <h1>MOCK MUN #1 (21-05-2022)</h1>
                 <p><br>NKO MUN is not only about love<br>NKO MUN is much more than that<br>Last Saturday (May 21,
                     2022),
                     NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.</p>
+            </div>
+        </div>
+        <div class="g" id="g2" style="flex-direction: row-reverse;">
+            <img class="img" onclick='infoGallery(1, "en")' src="./gallery-img/TALKSHOW_RETREAT-OF-THE-TIGER/Ảnh chung/Ảnh chung.jpg" alt="anhchung">
+            <div class="gb" style="cursor: pointer; color: white;"
+                onclick="infoGallery(1, 'en')">
+                <h1>TALKSHOW: RETREAT OF THE TIGER</h1>
+                <p>This talk show is based on the context of the 19th century when the development of colonialism has resulted in several repercussions to several aspects of our lives, when the interdependence of the economies was prevalent, and also when the economies were specialized and resulted in dramatic changes to the old societies including the ecosystems. By the same token, this explains why World War II occurred.  The talk show “Retreat of The Tiger”(simply translated as the comeback of tigers) wanted to introduce Model United Nations to students of High School For The Gifted-Viet Nam National University as well as that of other high schools.Also, this talk show is  held  in an effort to create opportunities for those interested in Model United Nations and other related socioeconomic problems to discuss and debate on these topics.</p>
+            </div>
+        </div>
+        <div class="g" id="g3">
+            <img class="img" onclick='infoGallery(2, "en")' src="./gallery-img/TALKSHOW_RETREAT-OF-THE-TIGER/Ảnh chung/Ảnh chung.jpg" alt="anhchung">
+            <div class="gb" style="cursor: pointer; color: white;"
+                onclick="infoGallery(2, 'en')">
+                <h1>TALKSHOW: ROLE OF INDIVIDUALS IN HISTORY</h1>
+                <p>Have you ever wondered...<br>What constitutes a great person?<br>Does great people make history? Or does history create great people?<br>The masses with history? Individuals among the masses ?<br>Whatever the answer is, this event is for you! In order to clarify the role of  individuals in history through specific cases in each period — ancient, medieval, and modern ones as well as to know when an individual can become a great man, NKOMUN is extremely delighted to accompany our teachers from the History Department of the High School  For The Gifted to organize the talk show "ROLE OF INDIVIDUALS IN HISTORY"</p>
+            </div>
+        </div>
+        <div class="g" id="g4" style="flex-direction: row-reverse;">
+            <img class="img" onclick='infoGallery(3, "en")' src="./gallery-img/TALKSHOW_RETREAT-OF-THE-TIGER/Ảnh chung/Ảnh chung.jpg" alt="anhchung">
+            <div class="gb" style="cursor: pointer; color: white;"
+                onclick="infoGallery(3, 'en')">
+                <h1>RENMUN</h1>
+                <p></p>
             </div>
         </div>
     </div>
