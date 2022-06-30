@@ -1,22 +1,5 @@
 var data = [
     {
-        name: 
-        {
-            'vi': 'MOCK MUN #1 21-05-2022',
-            'en': 'MOCK MUN #1 21-05-2022'
-        },
-        description: 
-        {
-            'vi': 'NKO MUN không chỉ có tình yêu - NKO MUN còn nhiều điều hơn thế<br>Vào thứ 7 (21/05/2022) vừa qua, NKO MUN đã có một buổi Training và Showcase Mock MUN diễn ra tại phòng A302.',
-            'en': 'NKO MUN is not only about love - NKO MUN is much more than that<br>Last Saturday (May 21, 2022), NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.'},
-        folder: './gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/',
-        img: [
-            {dest: 'Chủ tọa_Chairs.JPG', title: {'vi': 'Chủ toạ', 'en': 'Chairs'}},
-            {dest: 'Đại biểu_Delegates.JPG', title: {'vi': 'Đại biểu', 'en': 'Delegates'}},
-            {dest: 'Quan sát viên_Observers.JPG', title: {'vi': 'Quan sát viên', 'en': 'Observers'}}
-        ],
-    },
-    {
         name:
         {
             'vi': 'TALKSHOW: RETREAT OF THE TIGER',
@@ -47,6 +30,23 @@ var data = [
         folder: './gallery-img/CHUYÊN-ĐỀ _VAI-TRÒ-CỦA-CÁ-NHÂN-TRONG-LỊCH-SỬ/',
         img: [
         ]
+    },
+    {
+        name: 
+        {
+            'vi': 'MOCK MUN #1 21-05-2022',
+            'en': 'MOCK MUN #1 21-05-2022'
+        },
+        description: 
+        {
+            'vi': 'NKO MUN không chỉ có tình yêu - NKO MUN còn nhiều điều hơn thế<br>Vào thứ 7 (21/05/2022) vừa qua, NKO MUN đã có một buổi Training và Showcase Mock MUN diễn ra tại phòng A302.',
+            'en': 'NKO MUN is not only about love - NKO MUN is much more than that<br>Last Saturday (May 21, 2022), NKO MUN had a Training session and Showcase Mock MUN, which took place at room A302.'},
+        folder: './gallery-img/MOCKMUN1-21-05-2022/Ảnh riêng/',
+        img: [
+            {dest: 'Chủ tọa_Chairs.JPG', title: {'vi': 'Chủ toạ', 'en': 'Chairs'}},
+            {dest: 'Đại biểu_Delegates.JPG', title: {'vi': 'Đại biểu', 'en': 'Delegates'}},
+            {dest: 'Quan sát viên_Observers.JPG', title: {'vi': 'Quan sát viên', 'en': 'Observers'}}
+        ],
     },
     {
         name:
