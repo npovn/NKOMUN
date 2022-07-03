@@ -310,7 +310,6 @@
     width: 100vw;
     height: 100vh;
     z-index: 20;
-    touch-action: none;    
 }
 
 .gallery-popback {
@@ -358,12 +357,14 @@
         font-size: 2vh;
     }
     .table{
-        display: flex;
+        display: grid;
         padding-top: 4vh;
-        justify-content: space-evenly;
+        overflow-y: scroll;
+        height: 50vh;
     }
     .img-title{
         padding: 1vw;
+        text-align: center;
     }
     .img-title img{
         object-fit: contain;
@@ -404,6 +405,8 @@
         display: block;
         padding-top: 1vh;
         text-align: center;
+        overflow-y: scroll;
+        height: 65vh;
     }
     .img-title img{
         object-fit: contain;
@@ -443,6 +446,8 @@
         display: block;
         padding-top: 1vh;
         text-align: center;
+        overflow-y: scroll;
+        height: 65vh;
     }
     .img-title img{
         object-fit: contain;
@@ -454,4 +459,22 @@
         font-size: 3vh;
         font-weight: normal;
     }
+}
+.table{
+    -ms-overflow-style: scrollbar;  /* IE and Edge */
+    scrollbar-width: 10px;  /* Firefox */
+}
+.table::-webkit-scrollbar{
+    display: contents;
+    width: 10px;
+}
+.table::-webkit-scrollbar-track{
+    border-radius: 5px;
+}
+.table::-webkit-scrollbar-thumb {
+    background: rgba(173, 171, 171, 0.4); 
+    border-radius: 10px;
+}
+.table::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.6); 
 }
